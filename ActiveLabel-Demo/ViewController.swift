@@ -102,7 +102,7 @@ extension ViewController {
 
 // MARK: - ActiveLabelDelegate
 extension ViewController: ActiveLabelDelegate {
-    func didSelectEntity(_ entity: ActiveEntity) {
+    func activeLabel(_ activeLabel: ActiveLabel, didSelectActiveEntity entity: ActiveEntity) {
         print(entity.primaryText)
     }
 }
