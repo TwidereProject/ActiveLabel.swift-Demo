@@ -7,97 +7,59 @@
 
 import UIKit
 import ActiveLabel
+import Kanna
 import twitter_text
 
 class ViewController: UIViewController {
 
-    let label = ActiveLabel()
+    let tweetContentLabel = ActiveLabel()
+    let tootContentLabel = ActiveLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Demo"
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
+        tweetContentLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tweetContentLabel)
         NSLayoutConstraint.activate([
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            label.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            tweetContentLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 8),
+            tweetContentLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            tweetContentLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
         ])
         
-        let tweet = "RT @username: Hello 你好 こんにちは 😂😂😂 #hashtag https://twitter.com/ABCDEFG"
-        let tweetParseResults = ViewController.parse(tweet: tweet)
-        label.delegate = self
-        label.numberOfLines = 0
-        label.URLColor = .systemRed
-        label.mentionColor = .systemGreen
-        label.hashtagColor = .systemBlue
-        label.text = tweetParseResults.trimmedTweet
-        label.activeEntities = tweetParseResults.activeEntities
+        tootContentLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tootContentLabel)
+        NSLayoutConstraint.activate([
+            tootContentLabel.topAnchor.constraint(equalTo: tweetContentLabel.bottomAnchor, constant: 16),
+            tootContentLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            tootContentLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+        ])
+        
+        let tweet = "Tweet: \n@username: Hello 你好 こんにちは 😂😂😂 #hashtag https://twitter.com/ABCDEFG"
+        let tweetParseResults = TweetContent.parse(tweet: tweet)
+        tweetContentLabel.delegate = self
+        tweetContentLabel.numberOfLines = 0
+        tweetContentLabel.URLColor = .systemRed
+        tweetContentLabel.mentionColor = .systemGreen
+        tweetContentLabel.hashtagColor = .systemBlue
+        tweetContentLabel.text = tweetParseResults.trimmedTweet
+        tweetContentLabel.activeEntities = tweetParseResults.activeEntities
+        
+        let toot = """
+        <p>Toot:<br/><span class="h-card"><a class="u-url mention" href="https://example.com/users/@username" rel="nofollow noopener noreferrer" target="_blank">@<span>username</span></a></span> Hello 你好 こんにちは 😂😂😂 <a href="https://mstdn.jp/tags/hashtag" class="mention hashtag" rel="tag">#<span>hashtag</span></a> <a href="https://example.com/ABCDEFG/2021/02/01" rel="nofollow noopener noreferrer" target="_blank"><span class="invisible">https://</span><span class="ellipsis">example.com/ABCDEFG/</span><span class="invisible">2021/02/01</span></a></p>
+        """
+        if let parseResult = try? TootContent.parse(toot: toot) {
+            tootContentLabel.delegate = self
+            tootContentLabel.numberOfLines = 0
+            tootContentLabel.URLColor = .systemRed
+            tootContentLabel.mentionColor = .systemGreen
+            tootContentLabel.hashtagColor = .systemBlue
+            tootContentLabel.text = parseResult.trimmed
+            tootContentLabel.activeEntities = parseResult.activeEntities
+        }
     }
 
-}
-
-extension ViewController {
-    
-    struct TweetParseResult {
-        let originalTweet: String
-        let trimmedTweet: String
-        let activeEntities: [ActiveEntity]
-    }
-    
-    static func parse(tweet: String) -> TweetParseResult {
-        var activeEntities: [ActiveEntity] = []
-        let twitterTextEntities = TwitterText.entities(inText: tweet)
-        for twitterTextEntity in twitterTextEntities {
-            switch twitterTextEntity.type {
-            case .URL:
-                if let text = tweet.string(in: twitterTextEntity.range) {
-                    let trimmed = text.trim(to: 24)
-                    activeEntities.append(ActiveEntity(range: twitterTextEntity.range, type: .url(original: text, trimmed: trimmed)))
-                }
-            case .hashtag:
-                if let text = tweet.string(in: twitterTextEntity.range) {
-                    activeEntities.append(ActiveEntity(range: twitterTextEntity.range, type: .hashtag(text)))
-                }
-            case .screenName:
-                if let text = tweet.string(in: twitterTextEntity.range) {
-                    activeEntities.append(ActiveEntity(range: twitterTextEntity.range, type: .mention(text)))
-                }
-            default:
-                continue
-            }
-        }
-        
-        var trimmedTweet = tweet
-        for activeEntity in activeEntities {
-            guard case .url = activeEntity.type else { continue }
-            trimEntity(tweet: &trimmedTweet, activeEntity: activeEntity, activeEntities: activeEntities)
-        }
-        
-        return TweetParseResult(
-            originalTweet: tweet,
-            trimmedTweet: trimmedTweet,
-            activeEntities: activeEntities
-        )
-    }
-    
-    static func trimEntity(tweet: inout String, activeEntity: ActiveEntity, activeEntities:  [ActiveEntity]) {
-        guard case let .url(original, trimmed) = activeEntity.type else { return }
-        guard let index = activeEntities.firstIndex(where: { $0.range == activeEntity.range }) else { return }
-        guard let range = Range(activeEntity.range, in: tweet) else { return }
-        tweet.replaceSubrange(range, with: trimmed)
-        
-        let offset = trimmed.count - original.count
-        activeEntity.range.length += offset
-        
-        let moveActiveEntities = Array(activeEntities[index...].dropFirst())
-        for moveActiveEntity in moveActiveEntities {
-            moveActiveEntity.range.location += offset
-        }
-    }
-    
 }
 
 // MARK: - ActiveLabelDelegate

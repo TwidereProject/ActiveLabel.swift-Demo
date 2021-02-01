@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		92785A924AA62A1B9400A977 /* Pods_ActiveLabel_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF32BB9BFCA1B7EA83C1897 /* Pods_ActiveLabel_Demo.framework */; };
+		DB98331B25C7C6C200AD9700 /* ActiveLabel_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98331A25C7C6C200AD9700 /* ActiveLabel_DemoTests.swift */; };
+		DB98333125C7C70800AD9700 /* Toot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98333025C7C70800AD9700 /* Toot.swift */; };
+		DB98333D25C7E03100AD9700 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98333C25C7E03100AD9700 /* Tweet.swift */; };
 		DBB4B8B725823C4400C36075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4B8B625823C4400C36075 /* AppDelegate.swift */; };
 		DBB4B8B925823C4400C36075 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4B8B825823C4400C36075 /* SceneDelegate.swift */; };
 		DBB4B8BB25823C4400C36075 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB4B8BA25823C4400C36075 /* ViewController.swift */; };
@@ -16,13 +19,30 @@
 		DBB4B8C325823C4500C36075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB4B8C125823C4500C36075 /* LaunchScreen.storyboard */; };
 		DBBC3F1C25831A8C005CF99E /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBC3F1B25831A8C005CF99E /* UIViewPreview.swift */; };
 		DBBC3F2B258358A1005CF99E /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = DBBC3F2A258358A1005CF99E /* ActiveLabel */; };
+		E2839C820F6A7E35906E0BAA /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D393B00467DE2E1B9F7F34B /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB98331D25C7C6C200AD9700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBB4B8AB25823C4400C36075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBB4B8B225823C4400C36075;
+			remoteInfo = "ActiveLabel-Demo";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		19BBC5707B7CEDBD371C2CF6 /* Pods-ActiveLabel-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveLabel-Demo.release.xcconfig"; path = "Target Support Files/Pods-ActiveLabel-Demo/Pods-ActiveLabel-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		2D393B00467DE2E1B9F7F34B /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF32BB9BFCA1B7EA83C1897 /* Pods_ActiveLabel_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiveLabel_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CFB22E809E90635BA4B977 /* Pods-ActiveLabel-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveLabel-Demo.debug.xcconfig"; path = "Target Support Files/Pods-ActiveLabel-Demo/Pods-ActiveLabel-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		DB41787A25C2B5EB00A7766E /* ActiveLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ActiveLabel.swift; path = ../../Developer/ActiveLabel.swift; sourceTree = "<group>"; };
+		C0D81D86E66298E67E0B9D31 /* Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.release.xcconfig"; path = "Target Support Files/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB98331825C7C6C200AD9700 /* ActiveLabel-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ActiveLabel-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB98331A25C7C6C200AD9700 /* ActiveLabel_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveLabel_DemoTests.swift; sourceTree = "<group>"; };
+		DB98331C25C7C6C200AD9700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB98333025C7C70800AD9700 /* Toot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toot.swift; sourceTree = "<group>"; };
+		DB98333C25C7E03100AD9700 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		DBB4B8B325823C4400C36075 /* ActiveLabel-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActiveLabel-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB4B8B625823C4400C36075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB4B8B825823C4400C36075 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,9 +52,18 @@
 		DBB4B8C225823C4500C36075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBB4B8C425823C4500C36075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBBC3F1B25831A8C005CF99E /* UIViewPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
+		F94B321D3D890286FDD9129F /* Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DB98331525C7C6C200AD9700 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2839C820F6A7E35906E0BAA /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBB4B8B025823C4400C36075 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,15 +81,26 @@
 			children = (
 				90CFB22E809E90635BA4B977 /* Pods-ActiveLabel-Demo.debug.xcconfig */,
 				19BBC5707B7CEDBD371C2CF6 /* Pods-ActiveLabel-Demo.release.xcconfig */,
+				F94B321D3D890286FDD9129F /* Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.debug.xcconfig */,
+				C0D81D86E66298E67E0B9D31 /* Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB98331925C7C6C200AD9700 /* ActiveLabel-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB98331A25C7C6C200AD9700 /* ActiveLabel_DemoTests.swift */,
+				DB98331C25C7C6C200AD9700 /* Info.plist */,
+			);
+			path = "ActiveLabel-DemoTests";
 			sourceTree = "<group>";
 		};
 		DBB4B8AA25823C4400C36075 = {
 			isa = PBXGroup;
 			children = (
-				DB41787A25C2B5EB00A7766E /* ActiveLabel.swift */,
 				DBB4B8B525823C4400C36075 /* ActiveLabel-Demo */,
+				DB98331925C7C6C200AD9700 /* ActiveLabel-DemoTests */,
 				DBB4B8B425823C4400C36075 /* Products */,
 				DBBC3F1725823FA7005CF99E /* Frameworks */,
 				5E39995BFF69BB79947AF8AB /* Pods */,
@@ -71,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB4B8B325823C4400C36075 /* ActiveLabel-Demo.app */,
+				DB98331825C7C6C200AD9700 /* ActiveLabel-DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +119,8 @@
 		DBB4B8B525823C4400C36075 /* ActiveLabel-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB98333025C7C70800AD9700 /* Toot.swift */,
+				DB98333C25C7E03100AD9700 /* Tweet.swift */,
 				DBB4B8B625823C4400C36075 /* AppDelegate.swift */,
 				DBB4B8B825823C4400C36075 /* SceneDelegate.swift */,
 				DBB4B8BA25823C4400C36075 /* ViewController.swift */,
@@ -94,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				5FF32BB9BFCA1B7EA83C1897 /* Pods_ActiveLabel_Demo.framework */,
+				2D393B00467DE2E1B9F7F34B /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +145,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DB98331725C7C6C200AD9700 /* ActiveLabel-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB98332125C7C6C200AD9700 /* Build configuration list for PBXNativeTarget "ActiveLabel-DemoTests" */;
+			buildPhases = (
+				6F0668EAAEE9C0BB84315A79 /* [CP] Check Pods Manifest.lock */,
+				DB98331425C7C6C200AD9700 /* Sources */,
+				DB98331525C7C6C200AD9700 /* Frameworks */,
+				DB98331625C7C6C200AD9700 /* Resources */,
+				293047E69E60B77B71863DC3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB98331E25C7C6C200AD9700 /* PBXTargetDependency */,
+			);
+			name = "ActiveLabel-DemoTests";
+			productName = "ActiveLabel-DemoTests";
+			productReference = DB98331825C7C6C200AD9700 /* ActiveLabel-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DBB4B8B225823C4400C36075 /* ActiveLabel-Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBB4B8C725823C4500C36075 /* Build configuration list for PBXNativeTarget "ActiveLabel-Demo" */;
@@ -129,9 +193,13 @@
 		DBB4B8AB25823C4400C36075 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					DB98331725C7C6C200AD9700 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DBB4B8B225823C4400C36075;
+					};
 					DBB4B8B225823C4400C36075 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -154,11 +222,19 @@
 			projectRoot = "";
 			targets = (
 				DBB4B8B225823C4400C36075 /* ActiveLabel-Demo */,
+				DB98331725C7C6C200AD9700 /* ActiveLabel-DemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DB98331625C7C6C200AD9700 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBB4B8B125823C4400C36075 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +270,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		293047E69E60B77B71863DC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F0668EAAEE9C0BB84315A79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ActiveLabel-Demo-ActiveLabel-DemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B0ABE6414AA3C2CCA39F8FB2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,18 +329,36 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DB98331425C7C6C200AD9700 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB98331B25C7C6C200AD9700 /* ActiveLabel_DemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBB4B8AF25823C4400C36075 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DBB4B8BB25823C4400C36075 /* ViewController.swift in Sources */,
+				DB98333125C7C70800AD9700 /* Toot.swift in Sources */,
 				DBBC3F1C25831A8C005CF99E /* UIViewPreview.swift in Sources */,
+				DB98333D25C7E03100AD9700 /* Tweet.swift in Sources */,
 				DBB4B8B725823C4400C36075 /* AppDelegate.swift in Sources */,
 				DBB4B8B925823C4400C36075 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB98331E25C7C6C200AD9700 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBB4B8B225823C4400C36075 /* ActiveLabel-Demo */;
+			targetProxy = DB98331D25C7C6C200AD9700 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DBB4B8BC25823C4400C36075 /* Main.storyboard */ = {
@@ -247,6 +380,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DB98331F25C7C6C200AD9700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F94B321D3D890286FDD9129F /* Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LFDZ96332;
+				INFOPLIST_FILE = "ActiveLabel-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.ActiveLabel-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiveLabel-Demo.app/ActiveLabel-Demo";
+			};
+			name = Debug;
+		};
+		DB98332025C7C6C200AD9700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D81D86E66298E67E0B9D31 /* Pods-ActiveLabel-Demo-ActiveLabel-DemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LFDZ96332;
+				INFOPLIST_FILE = "ActiveLabel-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.ActiveLabel-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiveLabel-Demo.app/ActiveLabel-Demo";
+			};
+			name = Release;
+		};
 		DBB4B8C525823C4500C36075 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -353,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -372,7 +547,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8K92XFF77;
 				INFOPLIST_FILE = "ActiveLabel-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +567,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8K92XFF77;
 				INFOPLIST_FILE = "ActiveLabel-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +581,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB98332125C7C6C200AD9700 /* Build configuration list for PBXNativeTarget "ActiveLabel-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB98331F25C7C6C200AD9700 /* Debug */,
+				DB98332025C7C6C200AD9700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DBB4B8AE25823C4400C36075 /* Build configuration list for PBXProject "ActiveLabel-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -434,7 +616,7 @@
 			repositoryURL = "https://github.com/TwidereProject/ActiveLabel.swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

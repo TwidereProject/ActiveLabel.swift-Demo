@@ -7,4 +7,10 @@ target 'ActiveLabel-Demo' do
 
   # Pods for ActiveLabel-Demo
   pod 'twitter-text', '~> 3.1.0'
+  pod 'Kanna', '~> 5.2.4'
+  
+  target 'ActiveLabel-DemoTests' do
+    # Pods for testing
+  end
+  
 end

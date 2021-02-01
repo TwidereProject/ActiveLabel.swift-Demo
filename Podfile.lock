@@ -1,16 +1,20 @@
 PODS:
+  - Kanna (5.2.4)
   - twitter-text (3.1.0)
 
 DEPENDENCIES:
+  - Kanna (~> 5.2.4)
   - twitter-text (~> 3.1.0)
 
 SPEC REPOS:
   trunk:
+    - Kanna
     - twitter-text
 
 SPEC CHECKSUMS:
+  Kanna: b9d00d7c11428308c7f95e1f1f84b8205f567a8f
   twitter-text: 3a0d73ca52955439dc8b208ca7e123ea0abd6a51
 
-PODFILE CHECKSUM: 9755044340151fd8b473c3023f8abfc6799222bf
+PODFILE CHECKSUM: e8071da808c7314022c881b86534ce25eb24b7cd
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
