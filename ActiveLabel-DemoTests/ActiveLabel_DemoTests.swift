@@ -12,7 +12,7 @@ import Kanna
 class ActiveLabel_DemoTests: XCTestCase {
 
     func testParseNode() throws {
-        let rootNode = try TootContent.Node.parse(document: stubHTML)
+        let rootNode = try TootContent.Node.parse(document: stubHTML2)
     
         print("--- Tree ---")
         debugPrint(rootNode)
@@ -52,6 +52,11 @@ class ActiveLabel_DemoTests: XCTestCase {
     
     let stubHTML: String = """
     <p><a href="https://example.com/tags/tag1" class="mention hashtag" rel="nofollow noopener noreferrer" target="_blank">#<span>Tag1</span></a> Line 1<br/>Line 2 <a href="https://example.com/tags/tag2" class="mention hashtag" rel="nofollow noopener noreferrer" target="_blank">#<span>Tag2</span></a> <a href="https://example.com/some/path/here/123456/" rel="nofollow noopener noreferrer" target="_blank"><span class="invisible">https://</span><span class="ellipsis">example.com/some/path/</span><span class="invisible">here/123456/</span></a><br/><span>Line 3</span><br/><span class="h-card"><a class="u-url mention" href="https://example.com/users/@username" rel="nofollow noopener noreferrer" target="_blank">@<span>username</span></a></span>，Hello :ablobattention:</p>
+    """
+    
+    let stubHTML2: String = """
+    [table][tr][td]Magnitude   M 4.0Region  OFFSHORE OAXACA, MEXICODate time  2021-02-04 06:43:10.0 UTCLocation  15.59 N ; 95.97 WDepth  2 km[/td][/tr][/table]
+    <a href="https://www.emsc-csem.org/Earthquake/earthquake.php?id=945601" rel="nofollow noopener" target="_blank">Earthquake, Magnitude 4.0 - OFFSHORE OAXACA, MEXICO - 2021 February 04, 06:43:10 UTC</a>
     """
 
 }

@@ -19,7 +19,7 @@ enum TweetContent {
             case .URL:
                 if let text = tweet.string(in: twitterTextEntity.range) {
                     let trimmed = text.trim(to: 24)
-                    activeEntities.append(ActiveEntity(range: twitterTextEntity.range, type: .url(original: text, trimmed: trimmed)))
+                    activeEntities.append(ActiveEntity(range: twitterTextEntity.range, type: .url(text, trimmed: trimmed, url: text)))
                 }
             case .hashtag:
                 if let text = tweet.string(in: twitterTextEntity.range) {
@@ -48,12 +48,12 @@ enum TweetContent {
     }
 
     static func trimEntity(tweet: inout String, activeEntity: ActiveEntity, activeEntities: [ActiveEntity]) {
-        guard case let .url(original, trimmed, _) = activeEntity.type else { return }
+        guard case let .url(text, trimmed, _, _) = activeEntity.type else { return }
         guard let index = activeEntities.firstIndex(where: { $0.range == activeEntity.range }) else { return }
         guard let range = Range(activeEntity.range, in: tweet) else { return }
         tweet.replaceSubrange(range, with: trimmed)
         
-        let offset = trimmed.count - original.count
+        let offset = trimmed.count - text.count
         activeEntity.range.length += offset
         
         let moveActiveEntities = Array(activeEntities[index...].dropFirst())

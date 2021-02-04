@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92785A924AA62A1B9400A977 /* Pods_ActiveLabel_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF32BB9BFCA1B7EA83C1897 /* Pods_ActiveLabel_Demo.framework */; };
+		DB15DB8425CBE69900F0313D /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = DB15DB8325CBE69900F0313D /* ActiveLabel */; };
 		DB98331B25C7C6C200AD9700 /* ActiveLabel_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98331A25C7C6C200AD9700 /* ActiveLabel_DemoTests.swift */; };
 		DB98333125C7C70800AD9700 /* Toot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98333025C7C70800AD9700 /* Toot.swift */; };
 		DB98333D25C7E03100AD9700 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98333C25C7E03100AD9700 /* Tweet.swift */; };
@@ -18,7 +19,6 @@
 		DBB4B8C025823C4500C36075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB4B8BF25823C4500C36075 /* Assets.xcassets */; };
 		DBB4B8C325823C4500C36075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB4B8C125823C4500C36075 /* LaunchScreen.storyboard */; };
 		DBBC3F1C25831A8C005CF99E /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBC3F1B25831A8C005CF99E /* UIViewPreview.swift */; };
-		DBBC3F2B258358A1005CF99E /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = DBBC3F2A258358A1005CF99E /* ActiveLabel */; };
 		E2839C820F6A7E35906E0BAA /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D393B00467DE2E1B9F7F34B /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92785A924AA62A1B9400A977 /* Pods_ActiveLabel_Demo.framework in Frameworks */,
-				DBBC3F2B258358A1005CF99E /* ActiveLabel in Frameworks */,
+				DB15DB8425CBE69900F0313D /* ActiveLabel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +181,7 @@
 			);
 			name = "ActiveLabel-Demo";
 			packageProductDependencies = (
-				DBBC3F2A258358A1005CF99E /* ActiveLabel */,
+				DB15DB8325CBE69900F0313D /* ActiveLabel */,
 			);
 			productName = "ActiveLabel-Demo";
 			productReference = DBB4B8B325823C4400C36075 /* ActiveLabel-Demo.app */;
@@ -215,7 +215,7 @@
 			);
 			mainGroup = DBB4B8AA25823C4400C36075;
 			packageReferences = (
-				DBBC3F29258358A1005CF99E /* XCRemoteSwiftPackageReference "ActiveLabel" */,
+				DB15DB8225CBE69900F0313D /* XCRemoteSwiftPackageReference "ActiveLabel" */,
 			);
 			productRefGroup = DBB4B8B425823C4400C36075 /* Products */;
 			projectDirPath = "";
@@ -611,20 +611,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DBBC3F29258358A1005CF99E /* XCRemoteSwiftPackageReference "ActiveLabel" */ = {
+		DB15DB8225CBE69900F0313D /* XCRemoteSwiftPackageReference "ActiveLabel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TwidereProject/ActiveLabel.swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DBBC3F2A258358A1005CF99E /* ActiveLabel */ = {
+		DB15DB8325CBE69900F0313D /* ActiveLabel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DBBC3F29258358A1005CF99E /* XCRemoteSwiftPackageReference "ActiveLabel" */;
+			package = DB15DB8225CBE69900F0313D /* XCRemoteSwiftPackageReference "ActiveLabel" */;
 			productName = ActiveLabel;
 		};
 /* End XCSwiftPackageProductDependency section */
