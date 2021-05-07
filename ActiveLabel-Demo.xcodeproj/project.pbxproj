@@ -32,6 +32,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DB6180612645069D00877339 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		19BBC5707B7CEDBD371C2CF6 /* Pods-ActiveLabel-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiveLabel-Demo.release.xcconfig"; path = "Target Support Files/Pods-ActiveLabel-Demo/Pods-ActiveLabel-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		2D393B00467DE2E1B9F7F34B /* Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiveLabel_Demo_ActiveLabel_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +187,7 @@
 				DBB4B8B025823C4400C36075 /* Frameworks */,
 				DBB4B8B125823C4400C36075 /* Resources */,
 				B0ABE6414AA3C2CCA39F8FB2 /* [CP] Embed Pods Frameworks */,
+				DB6180612645069D00877339 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -615,8 +629,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TwidereProject/ActiveLabel.swift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				kind = exactVersion;
+				version = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

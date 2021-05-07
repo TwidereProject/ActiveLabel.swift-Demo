@@ -8,12 +8,18 @@
 import UIKit
 import ActiveLabel
 import Kanna
+import AlamofireImage
 import twitter_text
 
 class ViewController: UIViewController {
 
     let tweetContentLabel = ActiveLabel()
     let tootContentLabel = ActiveLabel()
+    
+    static let emojiDict: MastodonStatusContent.EmojiDict = [
+        ":apple_inc": URL(string: "https://media.mstdn.jp/custom_emojis/images/000/002/171/original/b848520ba07a354c.png")!,
+        ":awesome:": URL(string: "https://media.mstdn.jp/custom_emojis/images/000/002/757/original/3e0e01274120ad23.png")!
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,17 +53,21 @@ class ViewController: UIViewController {
         tweetContentLabel.activeEntities = tweetParseResults.activeEntities
         
         let toot = """
-        <p>Toot:<br/><span class="h-card"><a class="u-url mention" href="https://example.com/users/@username" rel="nofollow noopener noreferrer" target="_blank">@<span>username</span></a></span> Hello 你好 こんにちは 😂😂😂 <a href="https://mstdn.jp/tags/hashtag" class="mention hashtag" rel="tag">#<span>hashtag</span></a> <a href="https://example.com/ABCDEFG/2021/02/01" rel="nofollow noopener noreferrer" target="_blank"><span class="invisible">https://</span><span class="ellipsis">example.com/ABCDEFG/</span><span class="invisible">2021/02/01</span></a></p>
+        <p>Toot:<br/><span class="h-card"><a class="u-url mention" href="https://example.com/users/@username" rel="nofollow noopener noreferrer" target="_blank">@<span>username</span></a></span> Hello 你好 こんにちは 😂😂:awesome:<a href="https://mstdn.jp/tags/hashtag" class="mention hashtag" rel="tag">#<span>hashtag</span></a> <a href="https://example.com/ABCDEFG/2021/02/01" rel="nofollow noopener noreferrer" target="_blank"><span class="invisible">https://</span><span class="ellipsis">example.com/ABCDEFG/</span><span class="invisible">2021/02/01</span></a></p>
         """
-        if let parseResult = try? TootContent.parse(toot: toot) {
+        if let parseResult = try? MastodonStatusContent.parse(content: toot, emojiDict: ViewController.emojiDict) {
             tootContentLabel.delegate = self
             tootContentLabel.numberOfLines = 0
             tootContentLabel.URLColor = .systemRed
             tootContentLabel.mentionColor = .systemGreen
             tootContentLabel.hashtagColor = .systemBlue
+            tootContentLabel.emojiPlaceholderColor = .systemFill
             tootContentLabel.text = parseResult.trimmed
             tootContentLabel.activeEntities = parseResult.activeEntities
+            
+            
         }
+
     }
 
 }
