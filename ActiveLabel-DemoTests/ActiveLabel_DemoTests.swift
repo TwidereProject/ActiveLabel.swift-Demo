@@ -12,13 +12,13 @@ import Kanna
 class ActiveLabel_DemoTests: XCTestCase {
 
     func testParseNode() throws {
-        let rootNode = try TootContent.Node.parse(document: stubHTML2)
+        let rootNode = try MastodonStatusContent.Node.parse(document: stubHTML2)
     
         print("--- Tree ---")
         debugPrint(rootNode)
         
         print("--- hashtag ---")
-        for hashtag in TootContent.Node.hashtags(in: rootNode) {
+        for hashtag in MastodonStatusContent.Node.hashtags(in: rootNode) {
             let line = String(
                 format: "%@: %@",
                 String(hashtag.text),
@@ -28,7 +28,7 @@ class ActiveLabel_DemoTests: XCTestCase {
         }
         
         print("--- mention ---")
-        for url in TootContent.Node.mentions(in: rootNode) {
+        for url in MastodonStatusContent.Node.mentions(in: rootNode) {
             let line: String = String(
                 format: "%@: %@",
                 String(url.text),
@@ -39,7 +39,7 @@ class ActiveLabel_DemoTests: XCTestCase {
         
         
         print("--- urls ---")
-        for url in TootContent.Node.urls(in: rootNode) {
+        for url in MastodonStatusContent.Node.urls(in: rootNode) {
             let line: String = String(
                 format: "%@: %@(%@)",
                 String(url.text),

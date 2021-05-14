@@ -630,7 +630,7 @@
 			repositoryURL = "https://github.com/TwidereProject/ActiveLabel.swift";
 			requirement = {
 				kind = exactVersion;
-				version = 5.0.0;
+				version = 5.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
