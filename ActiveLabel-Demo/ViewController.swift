@@ -8,7 +8,6 @@
 import UIKit
 import ActiveLabel
 import Kanna
-import AlamofireImage
 import twitter_text
 
 class ViewController: UIViewController {
@@ -53,7 +52,7 @@ class ViewController: UIViewController {
         tweetContentLabel.activeEntities = tweetParseResults.activeEntities
         
         let toot = """
-        <p>Toot:<br/><span class="h-card"><a class="u-url mention" href="https://example.com/users/@username" rel="nofollow noopener noreferrer" target="_blank">@<span>username</span></a></span> Hello 你好 こんにちは 😂😂:awesome:<a href="https://mstdn.jp/tags/hashtag" class="mention hashtag" rel="tag">#<span>hashtag</span></a> <a href="https://example.com/ABCDEFG/2021/02/01" rel="nofollow noopener noreferrer" target="_blank"><span class="invisible">https://</span><span class="ellipsis">example.com/ABCDEFG/</span><span class="invisible">2021/02/01</span></a></p>
+        <p>Toot:<br><span class="h-card"><a class="u-url mention" href="https://example.com/users/@username" rel="nofollow noopener noreferrer" target="_blank">@<span>username</span></a></span> Hello 你好 こんにちは 😂😂:awesome:<a href="https://mstdn.jp/tags/hashtag" class="mention hashtag" rel="tag">#<span>hashtag</span></a> <a href="https://example.com/ABCDEFG/2021/02/01" rel="nofollow noopener noreferrer" target="_blank"><span class="invisible">https://</span><span class="ellipsis">example.com/ABCDEFG/</span><span class="invisible">2021/02/01</span></a></p>
         """
         if let parseResult = try? MastodonStatusContent.parse(content: toot, emojiDict: ViewController.emojiDict) {
             tootContentLabel.delegate = self
